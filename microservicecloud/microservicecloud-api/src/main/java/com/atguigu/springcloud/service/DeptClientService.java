@@ -8,8 +8,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.atguigu.springcloud.entities.Dept;
-
-@FeignClient(value = "MICROSERVICECLOUD-DEPT")
+/**
+ * @author 修改microservicecloud-api工程，
+根据已经有的DeptClientService接口新建一个实现了
+FallbackFactory接口的类DeptClientServiceFallbackFactory
+ */
+//@FeignClient(value = "MICROSERVICECLOUD-DEPT")
+@FeignClient(value = "MICROSERVICECLOUD-DEPT",fallbackFactory=DeptClientServiceFallbackFactory.class)
 public interface DeptClientService {
 	@RequestMapping(value = "/dept/get/{id}", method = RequestMethod.GET)
 	public Dept get(@PathVariable("id") long id);
