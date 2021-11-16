@@ -1,0 +1,13 @@
+server:
+  port: 80
+spring:
+  application:
+    name: cloud-consumer-order
+  cloud:
+    consul:
+      # consul注册中心地址
+      host: 101.200.178.253
+      port: 8500
+      discovery:
+#        hostname: 101.200.178.253
+        service-name: ${spring.application.name}
