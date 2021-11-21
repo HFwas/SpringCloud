@@ -58,4 +58,9 @@ public class PaymentController {
         List<String> collect = instances.stream().map(instance -> instance.getInstanceId() + ":" + instance.getHost() + ":" + instance.getServiceId() + ":" + instance.getPort()).collect(Collectors.toList());
         return collect;
     }
+
+    @GetMapping("/payment/lb")
+    public String getPaymentLB(){
+        return serverPort;
+    }
 }
