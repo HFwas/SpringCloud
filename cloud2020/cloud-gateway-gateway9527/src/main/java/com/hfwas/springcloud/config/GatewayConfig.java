@@ -21,4 +21,13 @@ public class GatewayConfig {
                 .build();
     }
 
+    @Bean
+    public RouteLocator routeLocatorLB(RouteLocatorBuilder routeLocatorBuilder){
+        return routeLocatorBuilder.routes()
+                .route("path_route2", route ->
+                        route.path("/payment/lb")
+                                .uri("http://localhost:8001"))
+                .build();
+    }
+
 }
