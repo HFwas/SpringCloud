@@ -1,10 +1,6 @@
 server:
   port: 3344
 
-eureka:
-  client:
-    service-url:
-      defaultZone: http://www.eureka7001.com:7001/eureka/
 spring:
   application:
     name: cloud-config-center
@@ -12,8 +8,16 @@ spring:
     config:
       server:
         git:
+          skipSslValidation: true # 跳过ssl认证
+          # GITHUB上边的仓库名称
           uri: https://github.com/HFwas/microservicecloud-config.git
+          # 搜索目录
           search-paths:
             - microservicecloud-config
+      # 读取分支
       label: master
 
+eureka:
+  client:
+    service-url:
+      defaultZone: http://www.eureka7001.com:7001/eureka/
