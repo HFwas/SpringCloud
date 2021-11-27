@@ -8,16 +8,31 @@ spring:
     config:
       server:
         git:
-          skipSslValidation: true # 跳过ssl认证
-          # GITHUB上边的仓库名称
+#          skip-ssl-validation: true
           uri: https://github.com/HFwas/microservicecloud-config.git
-          # 搜索目录
+#          uri: D:\java\workspace\microservicecloud-config
+          ### 搜索目录
           search-paths:
             - microservicecloud-config
-      # 读取分支
+      ### 读取分支
       label: master
+  rabbitmq:
+    host: 101.200.178.253
+    port: 15672
+    username: guest
+    password: guest
+
 
 eureka:
   client:
     service-url:
-      defaultZone: http://www.eureka7001.com:7001/eureka/
+      defaultZone: http://eureka7001.com:7001/eureka
+
+# rabbitmq相关配置，暴露bus刷新配置的端点
+management:
+  endpoints:
+    web:
+      # 暴露bus刷新配置的端点
+      exposure:
+        include: "bus-refresh"
+
