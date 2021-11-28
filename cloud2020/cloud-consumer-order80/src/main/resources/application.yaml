@@ -4,7 +4,14 @@ server:
 spring:
   application:
     name: cloud-order-service
-
+  zipkin:
+#    enabled: true
+    base-url: 101.200.178.253
+    sender:
+      type: web
+  sleuth:
+    sampler:
+      probability: 1
 eureka:
   client:
     # 表示是否将自己注册进eurekaserver默认为true
@@ -13,5 +20,6 @@ eureka:
     fetch-registry: true
     service-url:
 #      defaultZone: http://localhost:7001/eureka
-      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+#      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+      defaultZone: http://eureka7001.com:7001/eureka
 
