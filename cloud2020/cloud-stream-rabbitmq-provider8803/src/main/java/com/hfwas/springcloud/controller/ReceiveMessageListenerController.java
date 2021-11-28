@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @Date 2021/11/28 0:31
  */
 @RestController
-@EnableBinding
+@EnableBinding(Sink.class)
 public class ReceiveMessageListenerController {
 
     @Value("${server.port}")

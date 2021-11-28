@@ -18,6 +18,7 @@ spring:
           destination: studyExchange #表示要使用的exchange名称定义
           content-type: application/json #设置消息类型，本次为json
           binder: defaultRabbit  #设置要绑定的消息服务的具体设置
+          group: hfwasB
 eureka:
   client:
     service-url:
@@ -25,5 +26,5 @@ eureka:
   instance:
     lease-expiration-duration-in-seconds: 5 #如果现在超过了5秒的间隔
     lease-renewal-interval-in-seconds: 2 #设置心跳的时间间隔
-    instance-id: send-8803.com
+    instance-id: receive-8803.com
     prefer-ip-address: true #访问的路径变为IP地址
