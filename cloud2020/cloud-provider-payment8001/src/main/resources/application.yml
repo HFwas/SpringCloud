@@ -9,7 +9,6 @@ spring:
     sender:
       type: web
   sleuth:
-#    enabled: true
     sampler:
       # 采样率介于0到1之间，1表示全部采集
       probability: 1
