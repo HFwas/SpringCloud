@@ -12,3 +12,6 @@ spring:
       discovery:
 #        hostname: 101.200.178.253
         service-name: ${spring.application.name}
+        prefer-ip-address: true
+        heartbeat:
+          enabled: true

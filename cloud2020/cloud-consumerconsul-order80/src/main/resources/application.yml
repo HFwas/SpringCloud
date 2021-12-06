@@ -11,3 +11,5 @@ spring:
       discovery:
 #        hostname: 101.200.178.253
         service-name: ${spring.application.name}
+        heartbeat:
+          enabled: true
