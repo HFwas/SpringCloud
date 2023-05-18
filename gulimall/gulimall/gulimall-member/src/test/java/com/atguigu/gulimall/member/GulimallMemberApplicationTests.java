@@ -1,4 +1,4 @@
-package com.atguigu.gulimallmember;
+package com.atguigu.gulimall.member;
 
 import org.springframework.boot.test.context.SpringBootTest;
 

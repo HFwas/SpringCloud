@@ -1,9 +1,9 @@
-package com.atguigu.gulimallorder;
+package com.atguigu.gulimall.coupon;
 
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class GulimallOrderApplicationTests {
+class GulimallCouponApplicationTests {
 
 
 }
