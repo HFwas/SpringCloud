@@ -71,7 +71,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring-boot.version}</version>
                 <configuration>
-                    <mainClass>com.atguigu.gulimallware.GulimallWareApplication</mainClass>
+                    <mainClass>com.atguigu.gulimall.ware.GulimallWareApplication</mainClass>
                     <skip>true</skip>
                 </configuration>
                 <executions>
