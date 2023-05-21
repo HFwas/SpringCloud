@@ -1,0 +1,20 @@
+package com.atguigu.gulimall.product.service;
+
+import com.atguigu.gulimall.product.entity.AttrGroupEntity;
+import com.atguigu.gulimall.common.utils.PageUtils;
+import com.baomidou.mybatisplus.extension.service.IService;
+
+import java.util.Map;
+
+/**
+ * ���Է���
+ *
+ * @author hfwas
+ * @email hfwas1024@gmail.com
+ * @date 2023-05-17 22:51:32
+ */
+public interface AttrGroupService extends IService<AttrGroupEntity> {
+
+    PageUtils queryPage(Map<String, Object> params);
+}
+
