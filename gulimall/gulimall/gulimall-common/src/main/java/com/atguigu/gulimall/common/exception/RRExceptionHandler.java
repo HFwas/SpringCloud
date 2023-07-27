@@ -7,7 +7,6 @@
  */
 
 package com.atguigu.gulimall.common.exception;
-
 import com.atguigu.gulimall.common.utils.R;
 import org.apache.shiro.authz.AuthorizationException;
 import org.slf4j.Logger;
