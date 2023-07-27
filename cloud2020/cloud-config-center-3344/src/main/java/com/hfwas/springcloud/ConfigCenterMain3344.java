@@ -1,8 +1,11 @@
 package com.hfwas.springcloud;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.SpringBootVersion;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.config.server.EnableConfigServer;
+
+import javax.sound.midi.Soundbank;
 
 /**
  * @Author HFwas
@@ -12,6 +15,7 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 @EnableConfigServer
 public class ConfigCenterMain3344 {
     public static void main(String[] args) {
+        String version = SpringBootVersion.getVersion();
         SpringApplication.run(ConfigCenterMain3344.class, args);
     }
 }
